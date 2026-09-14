@@ -1,0 +1,8 @@
+[mgr]
+prepend_keymap = [
+  { on = "q", run = "escape --all", desc = "Keep sidebar open" },
+  { on = "Q", run = "escape --all", desc = "Keep sidebar open" },
+  { on = "<C-c>", run = "escape --all", desc = "Cancel; keep sidebar open" },
+  { on = "<C-z>", run = "escape --all", desc = "Keep sidebar running" },
+  { on = "O", run = "open", desc = "Open in Helix tab" },
+]
