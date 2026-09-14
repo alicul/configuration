@@ -1,0 +1,29 @@
+theme = "dark_plus"
+
+[editor]
+line-number = "relative"
+mouse = true
+true-color = true
+clipboard-provider = "termcode"
+auto-completion = true
+end-of-line-diagnostics = "hint"
+
+[editor.lsp]
+display-messages = true
+# gopls rejects inlay-hint requests while a file has no loaded package
+# metadata (for example while its workspace is still loading). Keep the core
+# LSP features enabled without surfacing that transient protocol error.
+display-inlay-hints = false
+
+[editor.inline-diagnostics]
+# Use the editor width for detailed Python/Go diagnostics instead of relying
+# on the small message area. Keep background noise limited on other lines.
+cursor-line = "hint"
+other-lines = "error"
+max-wrap = 40
+max-diagnostics = 5
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "underline"

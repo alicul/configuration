@@ -1,0 +1,15 @@
+[mgr]
+prepend_keymap = [
+  { on = "<Enter>", run = "plugin smart-enter", desc = "Enter directory or open file in Helix" },
+  { on = "q", run = "escape --all", desc = "Keep sidebar open" },
+  { on = "Q", run = "escape --all", desc = "Keep sidebar open" },
+  { on = "<C-c>", run = "escape --all", desc = "Cancel; keep sidebar open" },
+  { on = "<C-z>", run = "escape --all", desc = "Keep sidebar open" },
+  { on = "O", run = "open", desc = "Open in Helix" },
+]
+
+[input]
+prepend_keymap = [
+  { on = "<Esc>", run = "close", desc = "Cancel input" },
+  { on = "<C-c>", run = "close", desc = "Cancel input" },
+]

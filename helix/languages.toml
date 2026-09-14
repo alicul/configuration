@@ -1,0 +1,28 @@
+[language-server.gopls]
+command = "gopls"
+
+[language-server.basedpyright]
+command = "basedpyright-langserver"
+args = ["--stdio"]
+
+[language-server.basedpyright.config]
+basedpyright.analysis.autoSearchPaths = true
+basedpyright.analysis.diagnosticMode = "openFilesOnly"
+basedpyright.analysis.typeCheckingMode = "standard"
+basedpyright.analysis.useLibraryCodeForTypes = true
+
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
+
+[[language]]
+name = "go"
+roots = ["go.work", "go.mod", ".git"]
+language-servers = ["gopls"]
+auto-format = true
+
+[[language]]
+name = "python"
+roots = ["pyproject.toml", "setup.py", "setup.cfg", "requirements.txt", "pyrightconfig.json", ".git"]
+language-servers = ["basedpyright", "ruff"]
+auto-format = true

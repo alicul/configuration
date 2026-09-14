@@ -1,0 +1,17 @@
+# Compact single-column file tree for IDE sidebar
+[mgr]
+ratio = [0, 1, 0]
+sort_by = "natural"
+sort_dir_first = true
+show_hidden = true
+mouse_events = ["click", "scroll"]
+
+[opener]
+edit = [
+  { run = 'bash "$YAZI_CONFIG_HOME/../open-in-helix.sh" %s', orphan = true, desc = "Open in Helix", for = "unix" },
+]
+
+[open]
+rules = [
+  { url = "*", use = "edit" },
+]
